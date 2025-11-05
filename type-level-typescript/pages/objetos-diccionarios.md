@@ -12,5 +12,3 @@ title: Tipos de objetos
 ---
 
 ::left::
-
-

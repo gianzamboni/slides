@@ -37,7 +37,7 @@ const props = defineProps({
 }
 
 .two-cols-right {
-  align-items: center;
+  padding-top: 1em;
 }
 </style>
 

@@ -39,12 +39,28 @@ pre[class*='language-'] {
 }
 
 
+/* Do not render backticks around inline code */
 :not(pre)>code:before,
 :not(pre)>code:after {
-  content: '`';
-  opacity: 0.50;
+  content: "";
+  opacity: 1;
 }
 
 :not(pre)>code:before {
-  margin-right: -0.08em;
+  margin: 0;
+}
+
+/* Remove straight underlines from Monaco tokens */
+.monaco-editor .view-lines span {
+  text-decoration: none !important;
+  border-bottom: none !important;
+}
+
+/* Remove straight underlines inside Monaco hover tooltips */
+.monaco-editor .monaco-hover .hover-contents span,
+.monaco-editor .monaco-hover .hover-contents code,
+.monaco-editor-hover .hover-contents span,
+.monaco-editor-hover .hover-contents code {
+  text-decoration: none !important;
+  border-bottom: none !important;
 }

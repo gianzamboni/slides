@@ -13,9 +13,10 @@
   --comment: hsl(225, 27%, 51%);
   --cyan: hsl(191, 97%, 77%);
   --green: hsl(135, 94%, 65%);
+  --dark-green: hsl(135, 100%, 19%);
   --orange: hsl(31, 100%, 71%);
   --pink: hsl(326, 100%, 74%);
-  --gray: #d5dee8;
+  --purple: hsl(257, 100%, 91%);
   --red: hsl(0, 100%, 67%);
   --yellow: hsl(65, 92%, 76%);
 }
@@ -26,13 +27,8 @@
 
     --at-apply: text-$foreground bg-$background !important;
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      --at-apply: text-$gray;
+    p {
+      --at-apply: text-sm;
     }
 
     strong {
@@ -61,18 +57,11 @@
       font-style: italic;
     }
 
-    kbd {
-      --at-apply: text-$green;
-    }
-
     /* ℹ️ Update background color of code. We made it darker so we don't get same color for slide bg & code bg. */
     .slidev-code.shiki {
       background: hsl(231, 15%, 10%) !important;
     }
 
-    :not(pre)>code {
-      --at-apply: bg-transparent text-$green;
-    }
   }
 
   /* Layout: Cover, Intro */
@@ -84,22 +73,41 @@
     --at-apply: gap-0  !important;
 
     h1 {
-      --at-apply: text-2xl leading-20 text-$gray line-height-8;
+      --at-apply: text-2xl leading-20 text-$purple line-height-5;
     }
 
     h2 {
-      --at-apply: text-xl leading-20 text-$gray;
+      --at-apply: text-xl leading-20 text-$purple line-height-2;
     }
 
     ul {
-      --at-apply: text-sm text-$gray list-disc;
+      --at-apply: text-sm text-$purple list-disc;
+    }
+    :not(pre)>code {
+      --at-apply: bg-transparent text-$green;
     }
   }
 
   .slidev-layout.two-cols-right {
-    --at-apply: gap-4 !important;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      --at-apply: text-$background;
+    }
+
     h1 {
-      --at-apply: text-2xl leading-20 text-$gray;
+      --at-apply: text-2xl leading-20;
+    }
+
+    kbd {
+      --at-apply: text-$dark-reen;
+    }
+
+    :not(pre)>code {
+      --at-apply: bg-transparent text-$dark-green;
     }
   }
 
@@ -108,7 +116,7 @@
     --at-apply: h-full grid;
 
     h1 {
-      --at-apply: text-6xl leading-20 text-$gray; 
+      --at-apply: text-6xl leading-20 text-$purple; 
     }
 
     h1+p {

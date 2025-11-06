@@ -9,9 +9,9 @@ const props = defineProps({
   class: {
     type: String,
   },
-  imageColClass: {
+  imageRowClass: {
     type: String,
-    default: 'my-14 mr-14'
+    default: ''
   }
 })
 
@@ -19,10 +19,13 @@ const style = computed(() => handleBackground(props.image))
 </script>
 
 <template>
-  <div class="grid grid-cols-2 w-full h-full">
-    <div class="slidev-layout default image-right" :class="props.class">
+  <div class="grid grid-rows-10 w-full h-full">
+    <div class="grid-row-span-3" :class="props.imageRowClass" :style="style"></div>
+    <div class="slidev-layout default image-top grid-row-span-7" :class="props.class">
       <slot />
     </div>
-    <div :class="props.imageColClass" :style="style"></div>
   </div>
+  
 </template>
+
+

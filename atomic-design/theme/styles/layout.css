@@ -33,11 +33,14 @@
     }
 
     em {
-      --at-apply: text-$yellow;
+      --at-apply: text-italic;
     }
 
     ul,
     ol {
+      --at-apply: list-disc list-inside;
+
+      font-family: "Merriweather", Georgia, serif;
       li::marker {
         --at-apply: text-$cyan;
       }
@@ -85,6 +88,34 @@
     ul+h2,
     table+h2 {
       --at-apply: mt-10;
+    }
+  }
+
+  .slidev-layout.content {
+
+    @apply px-25 py-25;
+
+    h3, h4, h5, h6 {
+      --at-apply: text-$highlight;
+    }
+
+    .padding-content {
+      @apply h-25;
+    }
+    
+    .design-header {
+
+      @apply bg-$highlight py-5 px-25 mb-10 absolute top-0 left-0 w-full;
+
+      height: fit-content ;
+
+      h1, h2, h3, h4, h5, h6 {
+        --at-apply: text-$background;
+      }
+
+      h3, h4, h5, h6 {
+        --at-apply: opacity-50;
+      }
     }
   }
 
@@ -157,6 +188,18 @@
   }
 
   .slidev-layout.image-right {
+    --at-apply: bg-$highlight flex flex-col justify-center;
+
+    h1, h2, h3, h4, h5, h6, p, a {
+      --at-apply: text-$background;
+    }
+
+    h3, h4, h5, h6 {
+      --at-apply: opacity-50;
+    }
+  }
+
+  .slidev-layout.image-top {
     --at-apply: bg-$highlight flex flex-col items-center justify-center;
 
     h1, h2, h3, h4, h5, h6, p, a {

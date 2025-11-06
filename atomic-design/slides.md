@@ -19,6 +19,8 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+# use A4 portrait ratio (210mm x 297mm)
+aspectRatio: 210/297
 # duration of the presentation
 duration: 35min
 fonts:
@@ -36,26 +38,13 @@ fonts:
 <p class="text-left"><a href="https://atomicdesign.bradfrost.com/" target="_blank">Atomic Design</a> es un libro que detalla todo lo necesario para crear y mantener sistemas de diseño robustos, permitiéndote implementar interfaces de usuario de mayor calidad y consistencia con una rapidez sin precedentes.</p>
 
 ---
-layout: image-right
-image: ./images/devices.jpg
+layout: content
+title: Index
 ---
+# Index 
 
-### Capitulo 1
-# Diseñando sistemas
-### Crea y diseña sistemas, no páginas
+<Toc minDepth="1" maxDepth="1" columns="1" />
 
 ---
-layout: two-cols
-title: La metafora de la página
+src: ./pages/designing-systems.md
 ---
-:: left ::
-#### La metafora de la página
-<div class="text-left flex flex-col">
-  <p>Desde sus inicios, la metáfora de la página proporcionó a los usuarios un lenguaje familiar con el que navegar por el internet. 
-  </p>
-  <p>Conceptos como los marcadores y la paginación ayudaron a los nuevos usuarios a explorar y, finalmente, dominar un medio completamente nuevo utilizando convenciones con las que ya estaban familiarizados.</p>
-  <p><s>Medio millón de</s> 42 años después, esta figura retórica, antaño necesaria, ha perdido vigencia.</p>
-  <p>La web se convirtió en un medio fluido, interactivo e interdependiente. En cuanto aceptamos este hecho, la noción de página pierde rápidamente su utilidad para definir y crear experiencias web.</p>
-</div>
-:: right ::
-#### Concepto de

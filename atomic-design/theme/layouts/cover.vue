@@ -12,7 +12,7 @@ const props = defineProps({
   },
   imageColClass: {
     type: String,
-    default: 'my-14 mr-14 image-fit h-[75%] w-full'
+    default: 'image-fit h-[40%]'
   }
 })
 
@@ -25,7 +25,7 @@ style.value.backgroundSize = 'contain';
     <div class="slidev-layout default image-right" :class="props.class">
       <slot />
     </div>
-    <div class="h-full w-full">
+    <div class="h-full w-full place-content-center">
       <div :class="props.imageColClass" :style="style"></div>
     </div>
   </div>

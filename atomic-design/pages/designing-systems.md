@@ -8,8 +8,6 @@ title: ¿Por qué diseñar sistemas?
   title="Diseñando sistemas"
   subtitle="¿Por qué diseñar sistemas? Ventajas y desventajas"
 />
-<div class="padding-content"></div>
-
 <h3>La metafora de la página</h3>
 
 La metáfora de la página proporcionó a los usuarios un lenguaje familiar con el que navegar por el internet Conceptos como los marcadores y la paginación ayudaron a los nuevos usuarios a explorar y, finalmente, dominar un medio completamente nuevo utilizando convenciones con las que ya estaban familiarizados.

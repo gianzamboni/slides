@@ -113,6 +113,10 @@
         --at-apply: text-$background;
       }
 
+      h1 {
+        --at-apply: mb-2;
+      }
+
       h3, h4, h5, h6 {
         --at-apply: opacity-50;
       }

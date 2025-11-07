@@ -58,3 +58,12 @@ Una de las mayores ventajas que ofrece el diseño atómico es la capacidad de ca
 El diseño atómico nos brinda una estructura para navegar entre las partes y el todo de nuestras interfaces, por eso es crucial reiterar que el diseño atómico no es un proceso lineal. Sería un error diseñar botones y otros elementos de forma aislada y luego cruzar los dedos esperando que todo encaje en un conjunto coherente.
 
 El diseño atómico nos da un lenguaje para hablar tanto de la estructura de nuestros patrones de interfaz como del contenido que va dentro de ellos. Aunque hay una separación clara entre el esqueleto de la estructura de contenido (plantillas) y el contenido final (páginas), el diseño atómico reconoce que ambos se influyen mutuamente.
+
+Átomos, moléculas y organismos implican una jerarquía que cualquiera con un conocimiento básico de química puede entender fácilmente.
+
+Dicho esto, nombrar cosas es algo difícil e imperfecto. Los nombres que elegí para las etapas del diseño atómico han funcionado muy bien para mí y para los equipos con los que he trabajado al crear sistemas de diseño de UI. Pero puede que no funcionen para vos ni para tu organización.
+
+“Diseño atómico” como término resume los conceptos de diseño y desarrollo modular, lo cual se convierte en una abreviatura útil para convencer a los interesados y conversar con colegas. Pero el diseño atómico no es un dogma rígido.
+
+El diseño atómico es un concepto nacido de la web. Después de todo, el humilde autor es un diseñador web, lo cual es principalmente la razón por la que este libro se enfoca en interfaces basadas en la web. Pero es importante entender que el diseño atómico se aplica a todas las interfaces de usuario, no solo a las basadas en la web.
+

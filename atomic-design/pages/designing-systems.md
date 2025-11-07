@@ -3,11 +3,11 @@ layout: content
 title: ¿Por qué diseñar sistemas?
 ---
 
-<div class="design-header">
-  <h3>Capitulo 1</h3>
-  <h1>Atomic Design</h1>
-  <h3>¿Por qué diseñar sistemas? Ventajas y desventajas</h3>
-</div>
+<DesignHeader
+  chapter="Capitulo 1"
+  title="Diseñando sistemas"
+  subtitle="¿Por qué diseñar sistemas? Ventajas y desventajas"
+/>
 <div class="padding-content"></div>
 
 <h3>La metafora de la página</h3>

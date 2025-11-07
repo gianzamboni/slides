@@ -1,69 +1,58 @@
 ---
 layout: content
-title: Metódologias de diseño atómico
+title: Metódologia del diseño atómico
 ---
 
 <DesignHeader 
   chapter="Capitulo 2" 
   title="Metódologias de diseño atómico" 
-  subtitle="Átomos, moléculas, organismos, plantillas y páginas" 
+  subtitle="Átomos, moléculas, organismos, templates y páginas" 
 />
 
-### Etapas del diseño atómico
+### Las partes del diseño atómico
 
-El diseño atómico es una metodología compuesta por cinco etapas distintas que trabajan juntas para crear sistemas de diseño de interfaces de forma más deliberada y jerárquica. Las cinco etapas del diseño atómico son:
+El diseño atómico es una metodología compuesta por cinco partes distintas que trabajan juntas para crear sistemas de diseño de interfaces de forma más deliberada y jerárquica:
 
 - Átomos
 - Moléculas
 - Organismos
-- Plantillas
+- Templates
 - Páginas
 
-El diseño atómico no es un proceso lineal, sino un modelo mental que nos ayuda a pensar nuestras interfaces de usuario tanto como un todo cohesivo como una colección de partes al mismo tiempo.
+### Átomos
 
-Si los átomos son los bloques fundamentales de la materia, entonces los átomos de nuestras interfaces funcionan como los bloques fundamentales que componen todas nuestras interfaces de usuario. Estos átomos incluyen elementos básicos de HTML como etiquetas de formulario, campos de entrada, botones y otros que no pueden descomponerse más sin dejar de ser funcionales.
+Son los bloques fundamentales que componen las interfaces de usuario. Incluyen elementos básicos de HTML como etiquetas de formulario, campos de entrada, botones y otros que no pueden descomponerse más sin dejar de ser funcionales.
 
-En el contexto de una librería de patrones, los átomos muestran todos tus estilos base de un vistazo, lo cual puede servir como una referencia útil a la que volver constantemente mientras desarrollás y mantenés tu sistema de diseño. Pero, al igual que los átomos en el mundo natural, los átomos de interfaz no existen en el vacío y solo cobran vida realmente cuando se aplican.
+### Moléculas
 
-En química, las moléculas son grupos de átomos unidos entre sí que adquieren propiedades nuevas y distintivas.
+Son grupos relativamente simples de elementos de UI que funcionan juntos como una unidad. Por ejemplo, una etiqueta de formulario, un campo de búsqueda y un botón pueden unirse para formar una molécula de formulario de búsqueda.
 
-En las interfaces, las moléculas son grupos relativamente simples de elementos de interfaz (UI) que funcionan juntos como una unidad. Por ejemplo, una etiqueta de formulario, un campo de búsqueda y un botón pueden unirse para formar una molécula de formulario de búsqueda.
+### Organismos
 
-Crear componentes simples ayuda a los diseñadores y desarrolladores de UI a adherirse al principio de responsabilidad única, un antiguo precepto de la informática que fomenta la mentalidad de “hacer una sola cosa y hacerla bien”. Cargar a un solo patrón con demasiada complejidad hace que el software sea difícil de manejar. Por lo tanto, crear moléculas de interfaz simples facilita las pruebas, fomenta la reutilización y promueve la consistencia en toda la interfaz.
+Son componentes de UI relativamente complejos, compuestos por grupos de moléculas y/o átomos y/o otros organismos. Forman secciones diferenciadas de una interfaz y pueden estar compuestos por tipos de moléculas similares o diferentes. Por ejemplo, un organismo de encabezado puede incluir elementos distintos como un logotipo, una lista de navegación principal y un formulario de búsqueda.
 
-Los organismos son componentes de UI relativamente complejos, compuestos por grupos de moléculas y/o átomos y/o otros organismos. Estos organismos forman secciones diferenciadas de una interfaz.
+### Templates
 
-Los organismos pueden estar compuestos por tipos de moléculas similares o diferentes. Por ejemplo, un organismo de encabezado puede incluir elementos distintos como un logotipo, una lista de navegación principal y un formulario de búsqueda.
+Son objetos a nivel de página que ubican componentes dentro de un diseño y expresan la estructura subyacente del contenido del diseño. Proporcionan contexto para las moléculas y organismos relativamente abstractos. Se enfocan en la estructura de contenido subyacente de la página, más que en el contenido final.
 
-Mientras que algunos organismos pueden consistir en diferentes tipos de moléculas, otros pueden estar formados por una misma molécula repetida una y otra vez. Por ejemplo, si visitás una página de categoría de casi cualquier sitio de comercio electrónico, vas a ver una lista de productos mostrada en algún tipo de cuadrícula.
+Deben tener en cuenta la naturaleza dinámica del contenido, por lo que resulta muy útil definir propiedades importantes de los componentes, como tamaños de imágenes y longitudes de texto para encabezados y párrafos.
 
-Construir a partir de moléculas hasta llegar a organismos más elaborados brinda a los diseñadores y desarrolladores un importante sentido de contexto. Los organismos muestran esos componentes más pequeños y simples en acción, y funcionan como patrones diferenciados que pueden reutilizarse una y otra vez.
+### Pages
 
-Las plantillas son objetos a nivel de página que ubican componentes dentro de un diseño y expresan la estructura subyacente del contenido del diseño.
+Esto es con lo que los usuarios verán e interactuarán cuando visiten tu experiencia. Esto es lo que tus interesados aprobarán. Y aquí es donde todos esos componentes se unen para formar una interfaz de usuario hermosa y funcional.
 
-Las plantillas proporcionan contexto para estas moléculas y organismos relativamente abstractos. Al crear un sistema de diseño efectivo, es fundamental mostrar cómo los componentes se ven y funcionan juntos dentro del contexto de un diseño, para demostrar que las partes se combinan en un todo funcional.
-
-Se enfocan en la estructura de contenido subyacente de la página, más que en el contenido final. Los sistemas de diseño deben tener en cuenta la naturaleza dinámica del contenido, por lo que resulta muy útil definir propiedades importantes de los componentes, como tamaños de imágenes y longitudes de texto para encabezados y párrafos.
-
-Al definir el esqueleto de una página, podemos crear un sistema que contemple una variedad de contenidos dinámicos, y al mismo tiempo brinde las guías necesarias para los tipos de contenido que llenan ciertos patrones de diseño.
-
-Esto es lo que los usuarios verán e interactuarán cuando visiten tu experiencia. Esto es lo que tus interesados aprobarán. Y aquí es donde ves todos esos componentes uniéndose para formar una interfaz de usuario hermosa y funcional.
+---
+layout: content
+level: 2
+title: Components
+--- 
 
 Las páginas son esenciales para probar la efectividad del sistema de diseño subyacente. Es en la etapa de página donde podemos ver cómo se comportan todos esos patrones cuando se aplica contenido real al sistema de diseño.
 
-Las páginas también ofrecen un espacio para expresar variaciones en las plantillas, lo cual es crucial para establecer sistemas de diseño sólidos y confiables.
+### Ventajas del diseño atómico
 
 Una de las mayores ventajas que ofrece el diseño atómico es la capacidad de cambiar rápidamente entre lo abstracto y lo concreto. Podemos ver simultáneamente nuestras interfaces descompuestas en sus elementos atómicos y también observar cómo esos elementos se combinan para formar nuestras experiencias finales.
 
-El diseño atómico nos brinda una estructura para navegar entre las partes y el todo de nuestras interfaces, por eso es crucial reiterar que el diseño atómico no es un proceso lineal. Sería un error diseñar botones y otros elementos de forma aislada y luego cruzar los dedos esperando que todo encaje en un conjunto coherente.
+Es crucial reiterar que el diseño atómico no es un proceso lineal. Sería un error diseñar botones y otros elementos de forma aislada y luego cruzar los dedos esperando que todo encaje en un conjunto coherente.
 
-El diseño atómico nos da un lenguaje para hablar tanto de la estructura de nuestros patrones de interfaz como del contenido que va dentro de ellos. Aunque hay una separación clara entre el esqueleto de la estructura de contenido (plantillas) y el contenido final (páginas), el diseño atómico reconoce que ambos se influyen mutuamente.
-
-Átomos, moléculas y organismos implican una jerarquía que cualquiera con un conocimiento básico de química puede entender fácilmente.
-
-Dicho esto, nombrar cosas es algo difícil e imperfecto. Los nombres que elegí para las etapas del diseño atómico han funcionado muy bien para mí y para los equipos con los que he trabajado al crear sistemas de diseño de UI. Pero puede que no funcionen para vos ni para tu organización.
-
-“Diseño atómico” como término resume los conceptos de diseño y desarrollo modular, lo cual se convierte en una abreviatura útil para convencer a los interesados y conversar con colegas. Pero el diseño atómico no es un dogma rígido.
-
-El diseño atómico es un concepto nacido de la web. Después de todo, el humilde autor es un diseñador web, lo cual es principalmente la razón por la que este libro se enfoca en interfaces basadas en la web. Pero es importante entender que el diseño atómico se aplica a todas las interfaces de usuario, no solo a las basadas en la web.
-
+El diseño atómico nos da un lenguaje para hablar tanto de la estructura de nuestros patrones de interfaz como del contenido que va dentro de ellos. Aunque hay una separación clara entre el esqueleto de la estructura de contenido (templates) y el contenido final (páginas), el diseño atómico reconoce que ambos se influyen mutuamente.

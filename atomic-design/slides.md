@@ -52,3 +52,7 @@ src: ./pages/designing-systems.md
 ---
 src: ./pages/atomic-design-methodology.md
 ---
+
+---
+src: ./pages/tools-of-the-trade.md
+---

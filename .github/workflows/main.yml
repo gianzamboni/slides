@@ -15,9 +15,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: npm install
-
       # ✨ Build each Slidev project
       - name: Build slidev projects
         run: |
@@ -25,6 +22,7 @@ jobs:
           
           for dir in slides-*; do
             echo "Building $dir"
+            npm install
             npx slidev build $dir --out publish/$dir
           done
 

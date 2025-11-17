@@ -1,6 +1,7 @@
 ---
 layout: content
 title: Metódologia del diseño atómico
+routeAlias: atomicDesignMethodology
 ---
 
 <DesignHeader 

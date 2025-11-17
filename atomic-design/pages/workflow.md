@@ -1,6 +1,7 @@
 ---
 layout: content
 title: Workflow atómico
+routeAlias: workflow
 ---
 
 <DesignHeader 

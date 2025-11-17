@@ -1,6 +1,7 @@
 ---
 layout: content
 title: Herramientas del oficio
+routeAlias: toolsOfTheTrade
 ---
 
 <DesignHeader 

@@ -45,19 +45,20 @@ title: Index
 
 <ol>
 <li>
-<a href="#/3">Diseñando sistemas</a>
+<Link to="designingSystems" title="Diseñando sistemas" />
 <p>Diseño de sitios web tradicional vs diseño de sistemas. Ventajas y challenges de los sistemas de diseño.</p>
 </li>
+
 <li>
-<a href="#/6">Metódologia del diseño atómico</a>
+<Link to="atomicDesignMethodology" title="Metódologia del diseño atómico" />
 <p>Las partes del diseño atómico: Átomos, moléculas, organismos, templates y páginas.</p>
 </li>
 <li>
-<a href="#/9">Herramientas del oficio</a>
+<Link to="toolsOfTheTrade" title="Herramientas del oficio" />
 <p>Una introducción a Pattern Lab. Recomendado de leer del libro directamente.</p>
 </li>
 <li>
-<a href="#/10">Workflow atómico</a>
+<Link to="workflow" title="Workflow atómico" />
 <p>Personas, procesos y creación de sistemas. Técnicas para crear sistemas de diseño y workflow recomendados para los equipos.</p>
 </li>
 </ol>

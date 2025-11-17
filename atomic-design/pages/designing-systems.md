@@ -1,6 +1,7 @@
 ---
 layout: content
-title: ¿Por qué diseñar sistemas?
+title: Diseñando sistemas
+routeAlias: designingSystems
 ---
 
 <DesignHeader

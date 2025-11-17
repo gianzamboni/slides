@@ -36,14 +36,16 @@
       --at-apply: text-italic;
     }
 
-    ul,
-    ol {
-      --at-apply: list-disc list-inside;
+    ol, ul {
 
       font-family: "Merriweather", Georgia, serif;
       li::marker {
         --at-apply: text-$cyan;
       }
+    }
+
+    ul {
+      --at-apply: list-disc list-inside;
     }
 
     blockquote {

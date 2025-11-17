@@ -50,6 +50,9 @@ Permite ver los patrones de interfaz de manera aislada, permitiendo que los desa
 
 Requiere de mucho tiempo, reflexión y esfuerzo al inicio pero una vez que la librería está establecida, el diseño y desarrollo posterior se vuelve mucho más rápido.
 
+Generan experiencias coherentes y consistentes. Esto significa que los usuarios dominan tu interfaz más rápido, lo que se traduce en más conversiones y más ingresos según las métricas que les importan a tus partes interesadas.
+
+
 #### Challenges
 
 Para beneficiarse de las guías de estilo, las organizaciones primero deben asignar el tiempo y el presupuesto necesarios para llevarlas a cabo. Esto requiere que superen la mentalidad de corto plazo que se arraiga en la cultura de las empresas.
@@ -57,6 +60,11 @@ Para beneficiarse de las guías de estilo, las organizaciones primero deben asig
 A menudo se tratan como proyectos auxiliares, en lugar de considerarse partes esenciales del producto final y suelen caer en la categoría de “estaría bueno tenerlo” para convertirse en lo primero que se descarta cuando las cosas se complican.
 
 Las librerías de patrones, al igual que la accesibilidad, son ideas que conviene incorporar directamente en el flujo de trabajo, independientemente de si el plan del proyecto las menciona explícitamente o no.
+---
+layout: content
+level: 2
+title: Diseñando sistemas - Guias de estilos
+---
 
 Sin una estrategia clara sobre quién las gestiona, mantiene y aplica, la guía será descartada y abandonada.
 

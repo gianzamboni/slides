@@ -1,0 +1,36 @@
+name: Deploy multiple Slidev projects
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      # ✨ Build each Slidev project
+      - name: Build slidev projects
+        run: |
+          mkdir -p publish
+          
+          for dir in slides-*; do
+            echo "Building $dir"
+            npx slidev build $dir --out publish/$dir
+          done
+
+      # ✨ Deploy the combined output
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./publish

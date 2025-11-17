@@ -35,7 +35,7 @@ fonts:
 
 #### Resúmen
 
-<p class="text-left"><span class="text-blue-900 font-bold font-size-2xl">TODO:</span> <a href="https://atomicdesign.bradfrost.com/" target="_blank">Atomic Design</a> es un libro que presenta el concepto del diseño atómico y detalla lo necesario para empezar a crear un sistemas de diseño tanto en proyectos nuevos como en proyectos existentes.</p>
+<p class="text-left"><a href="https://atomicdesign.bradfrost.com/" target="_blank">Atomic Design</a> es una guía para crear e introducir los sistemas de diseño en una empresa o proyecto. Ofrece metodologías, flujos de trabajo, herramientas y cosas a tener en cuenta para asegurar su uso a largo plazo.</p>
 
 ---
 layout: content
@@ -61,6 +61,10 @@ title: Index
 <Link to="workflow" title="Workflow atómico" />
 <p>Personas, procesos y creación de sistemas. Técnicas para crear sistemas de diseño y workflow recomendados para los equipos.</p>
 </li>
+<li>
+<Link to="mantainingDesignSystems" title="Manteniendo sistemas de diseño" />
+<p>Cosas a tener en cuenta para mantener y actualizar un sistema de diseño.</p>
+</li>
 </ol>
 
 ---
@@ -77,4 +81,8 @@ src: ./pages/tools-of-the-trade.md
 
 ---
 src: ./pages/workflow.md
+---
+
+---
+src: ./pages/mantaining-design-systems.md
 ---

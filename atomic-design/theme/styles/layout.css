@@ -97,8 +97,12 @@
 
     @apply px-25 py-25;
 
-    h3, h4, h5, h6 {
+    h3, h4, h6 {
       --at-apply: text-$highlight;
+    }
+
+    h5 {
+      --at-apply: text-xl;
     }
 
     .padding-content {

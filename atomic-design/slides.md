@@ -35,7 +35,7 @@ fonts:
 
 #### Resúmen
 
-<p class="text-left"><a href="https://atomicdesign.bradfrost.com/" target="_blank">Atomic Design</a> es un libro que detalla todo lo necesario para crear y mantener sistemas de diseño robustos, permitiéndote implementar interfaces de usuario de mayor calidad y consistencia con una rapidez sin precedentes.</p>
+<p class="text-left"><span class="text-blue-900 font-bold font-size-2xl">TODO:</span> <a href="https://atomicdesign.bradfrost.com/" target="_blank">Atomic Design</a> es un libro que presenta el concepto del diseño atómico y detalla lo necesario para empezar a crear un sistemas de diseño tanto en proyectos nuevos como en proyectos existentes.</p>
 
 ---
 layout: content
@@ -43,7 +43,24 @@ title: Index
 ---
 # Index 
 
-<Toc minDepth="1" maxDepth="1" columns="1" />
+<ol>
+<li>
+<a href="#/3">Diseñando sistemas</a>
+<p>Diseño de sitios web tradicional vs diseño de sistemas. Ventajas y challenges de los sistemas de diseño.</p>
+</li>
+<li>
+<a href="#/6">Metódologia del diseño atómico</a>
+<p>Las partes del diseño atómico: Átomos, moléculas, organismos, templates y páginas.</p>
+</li>
+<li>
+<a href="#/9">Herramientas del oficio</a>
+<p>Una introducción a Pattern Lab. Recomendado de leer del libro directamente.</p>
+</li>
+<li>
+<a href="#/10">Workflow atómico</a>
+<p>Personas, procesos y creación de sistemas. Técnicas para crear sistemas de diseño y workflow recomendados para los equipos.</p>
+</li>
+</ol>
 
 ---
 src: ./pages/designing-systems.md

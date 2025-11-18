@@ -141,8 +141,7 @@
     }
 
     p {
-      --at-apply: text-sm;
-      font-family: "Merriweather", Georgia, serif;
+      --at-apply: text-sm font-serif;
     }
   }
 

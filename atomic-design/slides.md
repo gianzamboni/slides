@@ -1,6 +1,7 @@
 ---
 # try also 'default' to start simple
 theme: ./theme
+colorSchema: light
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 # some information about your slides (markdown enabled)
@@ -27,7 +28,7 @@ fonts:
   provider: google
   sans: Oswald
   serif: Merriweather
-  weights: [ 400, 700 ]
+  weights: [ 200, 300, 400, 500, 600, 700 ]
 ---
 
 # Atomic Design

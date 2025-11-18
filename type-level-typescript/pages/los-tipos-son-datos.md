@@ -71,12 +71,12 @@ title: Los tipos son conjuntos
 </div>
 
 <div class="row-start-2" v-click="1">
-  <p><strong>Unión de tipos:</strong> Representa la unión de dos tipos, el resultado es un tipo que puede ser de cualquiera de los dos tipos especificados.</p>
+  <p><strong>Unión:</strong> Representa la unión de dos tipos, el resultado es un tipo que puede ser de cualquiera de los dos tipos especificados.</p>
 </div>
 
 ::right::
 <div class="row-start-1 justify-items-center place-content-center h-50" v-click="1">
-<img class="h-40 " src="../images/the-union-hierarchy.svg" alt="String sets" />
+  <img class="h-50 " src="../images/the-union-hierarchy.svg" alt="String sets" />
 </div>
 <div class="row-start-2" v-click="1">
 <h6>Unión NUMBER | STRING</h6>
@@ -88,7 +88,6 @@ union = "Hello";
 union = true; // ❌
 ```
 </div>
-
 ---
 transition: slide-left
 layout: two-cols
@@ -97,13 +96,13 @@ title: Intersección de objectos
 ---
 
 ::left::
-<div class="row-start-1" >
-<h2>Intersección de tipos</h2>
-<p>Representa la intersección de dos tipos, el resultado es un tipo que contiene los valores en común de los dos tipos intersecados.</p>
+
+<div class="row-start-1">
+<p><strong>Intersección:</strong> Representa la intersección de dos tipos, el resultado es un tipo que contiene los valores en común de los dos tipos intersecados.</p>
 </div>
 
 <div class="row-start-2" v-click="1">
-<p><strong>Intersección de objetos:</strong> La intersección de dos tipos de objetos, es el conjunto que contiene todos las propiedades de ambos tipos.</p>
+<p><strong>Intersección de objetos:</strong> La intersección de dos tipos de objetos, es el conjunto que contiene todos las propiedades de ambos tipos. En otras palagras, funciona como un merge.</p>
 </div>
 
 ::right::
@@ -131,7 +130,7 @@ function someFunction(input: WithName & WithAge) {
 transition: slide-left
 layout: two-cols
 level: 2
-title: Unknown & Never
+title: Unknown
 ---
 ::left::
 <div class="row-start-1">
@@ -140,13 +139,7 @@ title: Unknown & Never
   <p>La union con <code>unknown</code> siempre será de tipo <code>unknown</code>.</p>
   <p>La intersección con <code>unknown</code> siempre dara el tipo intersectado con <code>unknown</code>.</p>
 </div>
-<div class="row-start-2 grid-row-span-full" v-click="1">
-  <h2>Never</h2>
-  <p> Es el tipo cuyo conjunto de valores es el conjunto vacío. Nunca va a tener valores.</p>
-  <p>Es subtipo de todos los tipos, está contenido en todos los tipos.</p>
-  <p>Una función que siempre lanza un error, siempre va a devolver <code>never</code>. </p>
-  <p>La intersección con <code>never</code> siempre es <code>never</code>.</p>
-</div>
+
 ::right::
 
 <div class="row-start-1"> 
@@ -163,7 +156,25 @@ type Union = string | unknown; // unknown
 type Intersection = string & unknown; // string
 ```
 </div>
-<div class="row-start-2" v-click="1">
+
+---
+transition: slide-left
+layout: two-cols
+level: 2
+title: Never
+---
+
+::left::
+<div class="row-start-1 grid-row-span-full">
+  <h2>Never</h2>
+  <p> Es el tipo cuyo conjunto de valores es el conjunto vacío. Nunca va a tener valores.</p>
+  <p>Es subtipo de todos los tipos, está contenido en todos los tipos.</p>
+  <p>Una función que siempre lanza un error, siempre va a devolver <code>never</code>. </p>
+  <p>La intersección con <code>never</code> siempre es <code>never</code>.</p>
+</div>
+
+::right::
+<div class="row-start-1">
 <h6>Never</h6>
 ```ts {monaco}
 function panic(): never {

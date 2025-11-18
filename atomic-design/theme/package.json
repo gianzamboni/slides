@@ -58,7 +58,7 @@
     "gen:demos": "tsx scripts/build.ts",
     "dev": "slidev slides/example.md --open",
     "dev:layouts": "slidev slides/layouts.md --open",
-    "export": "slidev export slides/example.md",
+    "export": "slidev export slides/example.md --theme-mode light",
     "screenshot": "slidev export slides/example.md --format png",
     "release": "bumpp package.json"
   }

@@ -34,12 +34,13 @@ layout: two-cols
 <div class="row-start-1 place-content-center">
 <h6>Función de valores <span v-click="1" class="text-xs">con notaciones de tipo</span></h6>
 ````md magic-move
-<<< @/snippets/tipos-valores.ts#without-types 
-<<< @/snippets/tipos-valores.ts#agrupar-types 
+<<< @/snippets/tipos-valores.ts#without-types
+<<< @/snippets/tipos-valores.ts#agrupar-types
 ````
 </div>
 <div class="row-start-2" v-click="2">
-```ts
+<h6>Función de tipo</h6>
+```ts {monaco}
 // Función de tipo, toma dos parámetros de tipo.
 // Devuelve el tipo tupla con un primer elemento de tipo A 
 // y un segundo elemento de tipo B:
@@ -48,6 +49,7 @@ type Tupla<A, B> = [A, B]
 </div>
 
 <div class="row-start-3 place-content-center" v-click="3">
+<h6>Inferencia de tipo</h6>
 ```ts {monaco}
 let name = "Gabriel";
 // name es de tipo string

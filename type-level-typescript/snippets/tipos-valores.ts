@@ -14,5 +14,15 @@ function agrupar<A, B>(a: A, b: B): Tupla<A, B> {
 }
 // #endregion agrupar-types
 
-type Tupla<A, B> = [A, B];
+// #region tupla-type-definition
+// Función de tipo, toma dos parámetros de tipo.
+// Devuelve el tipo tupla con un primer elemento de tipo A 
+// y un segundo elemento de tipo B:
+type Tupla<A, B> = [A, B]
+// #endregion tupla-type-definition
 
+// #region name-assignment
+let name: string = "Gabriel";
+// name es de tipo string
+console.log(name);
+// #endregion name-assignment

@@ -123,10 +123,11 @@ type WithName = { name: string };
 type WithAge = { age: number };
 
 function someFunction(input: WithName & WithAge) {
-  input.name; // ✅ property `name` has type `string`
-  input.age; // ✅ property `age` has type `number`
+  input.name; // ✅ propiedad `name` es de tipo `string`
+  input.age; // ✅ propiedad `age` es de tipo `number`
 }
-```</div>
+```
+</div>
 ---
 transition: slide-left
 layout: two-cols

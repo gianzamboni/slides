@@ -154,9 +154,17 @@
 
   /* Layout: Section */
   .slidev-layout.section {
+
+    background-color: var(--foreground);
+
     h1 {
       --at-apply: text-6xl font-500 leading-20;
     }
+
+    p, h6 {
+      color: var(--background);
+    }
+
   }
 
   /* Layout: Face */

@@ -1,6 +1,7 @@
 ---
 # try also 'default' to start simple
 theme: ./theme
+colorSchema: light
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
 # some information about your slides (markdown enabled)
@@ -25,15 +26,14 @@ aspectRatio: 210/297
 duration: 35min
 fonts:
   provider: google
-  sans: Oswald
-  serif: Merriweather
-  weights: [ 400, 700 ]
+  sans: 'Oswald'
+  serif: 'Merriweather'
+  weights: '200..700'
+  italic: true
 ---
 
-# Atomic Design
+# Resúmen Atomic Design
 ### by Brad Frost
-
-#### Resúmen
 
 <p class="text-left"><a href="https://atomicdesign.bradfrost.com/" target="_blank">Atomic Design</a> es una guía para crear e introducir los sistemas de diseño en una empresa o proyecto. Ofrece metodologías, flujos de trabajo, herramientas y cosas a tener en cuenta para asegurar su uso a largo plazo.</p>
 

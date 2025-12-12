@@ -1,6 +1,7 @@
 ---
 title: Objetos y diccionarios
 layout: intro
+transition: slide-left
 ---
 # Objetos y diccionarios
 
@@ -8,7 +9,7 @@ layout: intro
 transition: slide-left
 layout: two-cols
 level: 2
-title: Tipos de objetos
+title: Objetos
 ---
 
 ::left::
@@ -190,6 +191,7 @@ type C = A | B; // { c: boolean }
 transition: slide-left
 layout: section
 level: 2
+title: Diccionarios
 ---
 
 <div>
@@ -208,6 +210,7 @@ type InputState = Record<
 transition: slide-left
 layout: two-cols
 level: 2
+title: Funciones auxiliares
 ---
 
 ::left::

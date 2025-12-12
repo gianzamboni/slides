@@ -1,6 +1,7 @@
 ---
 title: Tipos y valores
 layout: intro
+transition: slide-left
 ---
 # Tipos y valores
 

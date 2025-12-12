@@ -25,7 +25,7 @@ hideInToc: true
 
 ## Index 
 
-<Toc minDepth="1" maxDepth="2" columns="1" />
+<Toc minDepth="1" maxDepth="2" columns="2" />
 
 ---
 src: ./pages/tipos-y-valores.md
@@ -37,4 +37,8 @@ src: ./pages/los-tipos-son-datos.md
 
 ---
 src: ./pages/objetos-diccionarios.md
+---
+
+---
+src: ./pages/tuplas-y-arrays.md
 ---

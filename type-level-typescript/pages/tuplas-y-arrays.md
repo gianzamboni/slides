@@ -151,9 +151,17 @@ type UserTuple = [name: string, age?: number, ...addresses: string[]];
 declare function createUser(...args: UserTuple): User;
 declare function updateUser(user: User, ...args: UserTuple): User;
 
-createUser("Gabriel", 29, "28 Central Ave", "7500 Greenback Ln");
+const gabriel = createUser("Gabriel", 29, "28 Central Ave", "7500 Greenback Ln");
 createUser("Bob"); // ✅ `age` es opcional y addresses puede estar vacío.
 createUser("Alice", 0, false); // ❌ el último argumento no es un `string`!
-updateUser(user, "Alice", 0, "1 Street");
+updateUser(gabriel, "Alice", 0, "1 Street");
+```
+</div>
+
+<div v-click="1">
+<h6>Length</h6>
+```ts {monaco}
+type Tuple = [string, number, boolean];
+type Length = Tuple['length']; // 3
 ```
 </div>

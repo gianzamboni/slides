@@ -7,9 +7,9 @@
    */
 
   /* Dracula colors: https: //draculatheme.com/contribute */
-  --background: hsl(231, 15%, 18%);
-  --current-line: hsl(232, 14%, 31%);
-  --foreground: hsl(60, 30%, 96%);
+  --background: hsl(221, 61%, 9%);
+  --current-line: hsl(221, 61%, 9%);
+  --foreground: hsl(60, 30%, 96%)
   --comment: hsl(225, 27%, 51%);
   --cyan: hsl(191, 97%, 77%);
   --green: hsl(135, 94%, 65%);
@@ -28,11 +28,11 @@
     --at-apply: text-$foreground bg-$background !important;
 
     p {
-      --at-apply: text-sm;
+      --at-apply: text-md font-light;
     }
 
     strong {
-      --at-apply: text-$orange;
+      --at-apply: font-black;
     }
 
     em {
@@ -73,11 +73,11 @@
     --at-apply: gap-0  !important;
 
     h1 {
-      --at-apply: text-2xl leading-20 text-$purple line-height-5;
+      --at-apply: text-2xl leading-20 text-$foreground line-height-5;
     }
 
     h2 {
-      --at-apply: text-xl leading-20 text-$purple line-height-2;
+      --at-apply: text-xl leading-20 text-$foreground line-height-2;
     }
 
     ul {
@@ -116,7 +116,7 @@
     --at-apply: h-full grid;
 
     h1 {
-      --at-apply: text-6xl leading-20 text-$purple; 
+      --at-apply: text-6xl leading-20 text-$foreground; 
     }
 
     h1+p {

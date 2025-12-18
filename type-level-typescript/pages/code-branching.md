@@ -1,6 +1,6 @@
 ---
 layout: intro
-title: Branching con tipos condicionales
+title: Keyword extends
 transition: slide-left
 ---
 # Branching con tipos condicionales
@@ -52,7 +52,8 @@ function createUser<S extends string>(name: S): { name: S } {
   return { name };
 }
 
-const gabriel = createUser("Gabriel"); // Gabriel es de tipo { name: "Gabriel" }
+const gabriel = createUser("Gabriel"); 
+// gabriel es de tipo { name: "Gabriel" }
 ```
 </div>
 
@@ -95,3 +96,61 @@ type T2 = IsUser<{ name: "Alice", age: 32 }> // => true
 ```
 </div>
 
+---
+transition: slide-left
+layout: section
+level: 2
+---
+
+<div>
+<h6>Branching en simultaneo</h6>
+```ts {monaco}
+type Plan = "basic" | "pro" | "premium";
+type Role = "viewer" | "editor" | "admin";
+
+type CanEdit<P extends Plan, R extends Role> =
+  [P, R] extends ["pro" | "premium", "editor" | "admin"]
+  ? true
+  : false; // Solo puede editar si es pro o premium y es editor o admin
+
+type T1 = CanEdit<"basic", "editor">; // => false. Un usuario "basic" no puede ser editor
+type T2 = CanEdit<"premium", "viewer">; // => false. Un usuario "premium" que es viewer no puede editar
+type T3 = CanEdit<"pro", "editor">; // => true. Un usuario "pro" que es editor puede editar
+type T4 = CanEdit<"premium", "admin">; // => true. Un usuario "premium" que es admin puede editar
+```
+</div>
+
+---
+transition: slide-left
+layout: two-cols
+level: 2
+title: infer keyword
+---
+
+::left::
+
+<div class="row-start-1">
+<h2>infer keyword</h2>
+<p>El keyword <code>infer</code> nos permite declarar una variable de tipo dentro de un tipo condicional.</p>
+<p>Se usa dentro de una destructuración de tipo.</p>
+<p>La variable de tipo declarada puede ser usada en la rama verdadera del tipo condicional.</p>
+<p>No es accesible desde la rama falsa.</p>
+</div>
+
+::right::
+
+<div class="row-start-1">
+<h6>infer keyword</h6>
+```ts {monaco}
+type GetRole<User> =
+  User extends { name: string; role: infer Role }
+    ? Role // Asignamos a la variable Role el tipo de la propiedad role del objeto User.
+    : never;
+
+type T1 = GetRole<{ name: "Gabriel"; role: "admin" }>;
+// => 'admin'
+
+type T2 = GetRole<{ role: "user" }>;
+// => `never` porque no se cumple la condición del extends (el tipo de entrada no tiene la propiedad name)
+```
+</div>

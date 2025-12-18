@@ -220,15 +220,15 @@ title: Funciones auxiliares
 <p><strong>Partial:</strong> Convierte todas las propiedades de un tipo en opcionales.</p>
 </div>
 
-<div class="row-start-2" >
+<div class="row-start-2" v-click="1">
 <p><strong>Required:</strong> Convierte todas las propiedades de un tipo en requeridas.</p>
 </div>
 
-<div class="row-start-3" >
+<div class="row-start-3" v-click="2">
 <p><strong>Pick:</strong> Extrae un subconjunto de propiedades de un tipo.</p>
 </div>
 
-<div class="row-start-4" >
+<div class="row-start-4" v-click="3">
 <p><strong>Omit:</strong> Omite un subconjunto de propiedades de un tipo.</p>
 </div>
 
@@ -243,15 +243,15 @@ type PartialUser = Partial<User>;
 ```
 </div>
 
-<div class="row-start-2" >
+<div class="row-start-2" v-click="1">
 <h6>Required</h6>
-```ts {monaco}
+```ts {monaco} 
 type RequiredUser = Required<PartialUser>;
 // { name: string, age: number, isAdmin: boolean }
 ```
 </div>
 
-<div class="row-start-3" >
+<div class="row-start-3" v-click="2">
 <h6>Pick</h6>
 ```ts {monaco}
 type PickUser = Pick<User, 'name' | 'age'>;
@@ -259,7 +259,7 @@ type PickUser = Pick<User, 'name' | 'age'>;
 ```
 </div>
 
-<div class="row-start-4" >
+<div class="row-start-4" v-click="3">
 <h6>Omit</h6>
 ```ts {monaco}
 type OmitUser = Omit<User, 'isAdmin'>;

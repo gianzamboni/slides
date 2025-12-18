@@ -46,3 +46,7 @@ src: ./pages/tuplas-y-arrays.md
 ---
 src: ./pages/code-branching.md
 ---
+
+---
+src: ./pages/loops-with-recursive-types.md
+---

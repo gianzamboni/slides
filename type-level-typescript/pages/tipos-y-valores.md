@@ -27,7 +27,7 @@ layout: two-cols
 
 <div class="row-start-3" v-click="3">
 <p>
-<strong>Inferencia de tipo</strong>: Typescript puede inferir el tipo de una variable o función en base al contexto.
+<strong>Inferencia de tipo</strong>: Typescript puede inferir el tipo de una variable o función en base al contexto. Muchas veces podemos omitir el tipo de una variable o función.
 </p>
 </div>
 

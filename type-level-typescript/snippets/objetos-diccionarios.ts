@@ -6,6 +6,11 @@ type User = {
 };
 // #endregion user-type-definition
 
+// #region partial-type-definition
+type PartialUser = Partial<User>;
+// { name?: string, age?: number, isAdmin?: boolean }
+// #endregion partial-type-definition
+
 // #region alice-assignment
 const alice: User = {
   name: "Alice",

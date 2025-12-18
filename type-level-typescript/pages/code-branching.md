@@ -105,18 +105,11 @@ level: 2
 <div>
 <h6>Branching en simultaneo</h6>
 ```ts {monaco}
-type Plan = "basic" | "pro" | "premium";
-type Role = "viewer" | "editor" | "admin";
+type And<A extends boolean, B extends boolean> = [A, B] extends [true, true] ? true : false;
 
-type CanEdit<P extends Plan, R extends Role> =
-  [P, R] extends ["pro" | "premium", "editor" | "admin"]
-  ? true
-  : false; // Solo puede editar si es pro o premium y es editor o admin
-
-type T1 = CanEdit<"basic", "editor">; // => false. Un usuario "basic" no puede ser editor
-type T2 = CanEdit<"premium", "viewer">; // => false. Un usuario "premium" que es viewer no puede editar
-type T3 = CanEdit<"pro", "editor">; // => true. Un usuario "pro" que es editor puede editar
-type T4 = CanEdit<"premium", "admin">; // => true. Un usuario "premium" que es admin puede editar
+type BothTrue = And<true, true>; // => true
+type OneTrue = And<true, false>; // => false
+type BothFalse = And<false, false>; // => false
 ```
 </div>
 
@@ -139,18 +132,40 @@ title: infer keyword
 
 ::right::
 
-<div class="row-start-1">
-<h6>infer keyword</h6>
+<div class="row-start-1" style="display: flex; flex-direction: column; gap: 1rem;">
+<div>
+<h6>infer keyword en objetos</h6>
 ```ts {monaco}
-type GetRole<User> =
+type GetRole<User> = 
   User extends { name: string; role: infer Role }
     ? Role // Asignamos a la variable Role el tipo de la propiedad role del objeto User.
     : never;
 
-type T1 = GetRole<{ name: "Gabriel"; role: "admin" }>;
-// => 'admin'
-
-type T2 = GetRole<{ role: "user" }>;
-// => `never` porque no se cumple la condición del extends (el tipo de entrada no tiene la propiedad name)
+type T1 = GetRole<{ name: "Gabriel"; role: string }>;
+// => string
 ```
+</div>
+
+<div v-click="1">
+<h6>infer keyword en tuplas</h6>
+```ts {monaco}
+type First<Tuple> = Tuple extends [infer First, ...any[]]
+    ? First // Asignamos a la variable First el tipo del primer elemento de la tupla.
+    : never;
+
+type T1 = First<[number, string, boolean]>;
+// => number
+```
+</div>
+
+<div v-click="2">
+<h6>infer keyword en parámetros de tipo</h6>
+```ts {monaco}
+type PromiseType<P> = P extends Promise<infer Type> 
+  ? Type 
+  : never;
+  
+type T1 = PromiseType<Promise<string>>; // => string
+```
+</div>
 </div>

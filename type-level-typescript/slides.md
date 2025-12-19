@@ -50,3 +50,7 @@ src: ./pages/code-branching.md
 ---
 src: ./pages/loops-with-recursive-types.md
 ---
+
+---
+src: ./pages/template-literals-types.md
+---

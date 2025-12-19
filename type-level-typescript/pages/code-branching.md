@@ -1,6 +1,6 @@
 ---
 layout: intro
-title: Keyword extends
+title: Branching con tipos condicionales
 transition: slide-left
 ---
 # Branching con tipos condicionales
@@ -9,7 +9,6 @@ transition: slide-left
 transition: slide-left
 layout: two-cols
 level: 2
-title: Branching con tipos condicionales
 ---
 
 ::left::
@@ -164,7 +163,7 @@ type T1 = First<[number, string, boolean]>;
 type PromiseType<P> = P extends Promise<infer Type> 
   ? Type 
   : never;
-  
+
 type T1 = PromiseType<Promise<string>>; // => string
 ```
 </div>

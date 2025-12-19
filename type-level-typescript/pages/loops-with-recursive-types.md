@@ -9,7 +9,6 @@ transition: slide-left
 transition: slide-left
 layout: section
 level: 2
-title: Loops con tipos recursivos
 ---
 
 <div>
@@ -45,7 +44,7 @@ type ToNames<List> =
 transition: slide-left
 layout: section
 level: 2
-title: Loops con tipos recursivos
+title: Parámetros de tipo opcionales
 ---
 
 

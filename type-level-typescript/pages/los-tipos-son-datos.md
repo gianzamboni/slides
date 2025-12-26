@@ -75,7 +75,7 @@ title: Los tipos son conjuntos
 </div>
 
 ::right::
-<div class="row-start-1 justify-items-center place-content-center h-50" v-click="1">
+<div class="row-start-1 justify-items-center place-content-center h-50">
 <img class="h-40 " src="../images/the-union-hierarchy.svg" alt="String sets" />
 </div>
 <div class="row-start-2" v-click="1">

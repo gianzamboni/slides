@@ -72,9 +72,9 @@ type Variant = "primary" | "secondary";
 type Size = "sm" | "md" | "lg";
 
 type ButtonStyle = `${Variant}-${Size}`;
+// Genera todos los posibles combinaciones de Variant y Size.
 // => | "primary-sm"   | "primary-md"   | "primary-lg"
 //    | "secondary-sm" | "secondary-md" | "secondary-lg"
-// Genera todos los posibles combinaciones de Variant y Size.
 ```
 </div>
 
@@ -103,7 +103,7 @@ title: Template literals types
 ---
 
 <div>
-<h6>Pattern matching con template literals types</h6>
+<h6>Pattern matching con template literals</h6>
 ```ts {monaco}
 type NameTuple<T> = T extends `${infer FirstName} ${infer LastName}` ? [FirstName, LastName] : never;
 

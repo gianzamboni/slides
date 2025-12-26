@@ -61,7 +61,7 @@ const pedro =  {
 }
 
 const pedroUser: User = pedro; // ✅
-pedroUser.bio // ❌ Solo podemos usar propiedades definidas en User
+pedroUser.bio // ❌
 ```
 </div>  
 
@@ -74,13 +74,13 @@ level: 2
 <div>
 <h6>Tipo {}</h6>
 ```ts {monaco}
-let objeto: {};  // Puede tener cualquier valor
+let objeto: {};  // Puede tener cualquier valor salvo null o undefined.
 objeto = { name: "Gabriel", age: 20 };
 objeto = [1, 2, 3];
-objeto = null;
-objeto = undefined;
 objeto = "Hola";
 objeto = 10;
+objeto = null; // ❌
+objeto = undefined; // ❌
 ```
 </div>
 
@@ -90,9 +90,9 @@ objeto = 10;
 let objeto: object; // Puede ser cualquier valor que no sea primitivo.
 objeto = { name: "Gabriel", age: 20 };
 objeto = [1, 2, 3];
-objeto = null;
-objeto = "Hola";
-objeto = 10;
+objeto = null; // ❌
+objeto = "Hola"; // ❌
+objeto = 10; // ❌
 ```
 </div>
 
@@ -107,9 +107,27 @@ type UserKeys = keyof User; // 'name' | 'age' | 'isAdmin'
 
 ---
 transition: slide-left
-layout: section
+layout: two-cols
 level: 2
 ---
+
+::left::
+
+<div class="row-start-1" >
+<h2>Acceso a propiedades</h2>
+<p>Podemos acceder a las propiedades de un objeto usando la notación de corchetes y el nombre de una propiedad. Esto nos devuelve el tipo de la propiedad.</p>
+<p>También podemos pasar una unión de propiedades para acceder a múltiples propiedades simultaneamente.</p>
+</div>
+
+<div class="row-start-2" v-click="1">
+<h2>Propiedades opcionales</h2>
+<p>Tener propiedades en un objeto que pueden ser de algún tipo o estar indefinidas es muy común. Si en typescript declaramos un tipo con una propiedad usando la unión de ese tipo con undefined, nos obliga a escribir explícitamente la propiedad en el objeto cada vez que lo creamos.</p>
+
+<p>Para evitar esto, existe el operador <code>?</code> que nos permite marcar una propiedad como opcional.</p>
+
+</div>
+
+::right::
 
 <div>
 <h6>Acceso a propiedades:</h6>
@@ -125,17 +143,17 @@ type NameOrAge = User['name' | 'age']; // string | number
 <div v-click="1">
 <h6>Propiedades opcionales</h6>
 ```ts {monaco}
-type BlogPost = { title: string; tags?: string[] };
-//                                   ^ esta propiedad es opcional!
+type User = { name: string, gender: 'f' | 'm' | undefined };
+type User2 = { name: string, gender?: 'f' | 'm' };
 
-// ✅ Sin la propiedad `tags`
-const blogBost1: BlogPost = { title: "introduction" };
+const user: User = { name: "Alice", gender: undefined };
+// ✅ La propiedad `gender` es undefined 
 
-// ✅ `tags` contiene una lista de strings
-const blogBost2: BlogPost = {
-  title: "part 1",
-  tags: ["#easy", "#beginner-friendly"],
-};
+const user: User = { name: "Alice" }; 
+// ❌ No tiene la propiedad `gender`
+
+const user3: User2 = { name: "Alice" }; 
+// ✅ La propiedad `gender` opcional
 
 ```
 </div>
@@ -149,6 +167,7 @@ level: 2
 ::left::
 
 <div class="row-start-1" >
+<h2>Intersección y unión de objetos</h2>
 <p><strong>Intresección de objetos:</strong> La intersección de dos tipos de objetos, es el conjunto que contiene todos las propiedades de ambos tipos.</p>
 <p>Si ambos objetos tienen propiedades con el mismo nombre, también se aplica la interesección a las mismas.</p>
 </div>
@@ -189,12 +208,19 @@ type C = A | B; // { c: boolean }
 
 ---
 transition: slide-left
-layout: section
+layout: two-cols
 level: 2
 title: Diccionarios
 ---
+::left::
+<div class="row-start-1" >
+<h2>Diccionarios</h2>
+<p>Son objetos cuyas propiedades son todas del mismo tipo.</p>
+</div>
 
-<div>
+
+::right::
+<div class="row-start-1" >
 <h6>Diccionarios</h6>
 ```ts {monaco}
 type RecordOfBooleans = { [key: string]: boolean };
@@ -203,6 +229,24 @@ type InputState = Record<
   "valid" | "edited" | "focused", 
   boolean
 >;
+
+const booleanos: RecordOfBooleans = {
+  a: true,
+  b: false,
+  c: true,
+};
+
+const numbers: RecordOfNumbers = {
+  a: 1,
+  b: 2,
+  c: 3,
+};
+
+const inputState: InputState = {
+  valid: true,
+  edited: false,
+  focused: true,
+};
 ```
 </div>
 
